@@ -28,8 +28,8 @@ public class LetterGrades {
 
 
             switch (grade / 10) {
+                case 10:
                 case 9:
-                case 100:
                     ++aCounter;
                     break;
                 case 8:
@@ -52,15 +52,15 @@ public class LetterGrades {
             double average = (double) total / gradeCounter;
             System.out.printf("Total of the %d grades entered is %d%n", gradeCounter, total);
             System.out.printf("The average grade is %.2f%n", average);
-            System.out.printf("%n%s%n%s%d%n%s%d%n%s%d%n%s%d%n%s%d%n",
-                    "A: ", aCounter,
-                    "B: ", bCounter,
-                    "C: ", cCounter,
-                    "D: ", dCounter,
-                    "F: ", fCounter);
+            System.out.printf("A: %d%n", aCounter);
+            System.out.printf("B: %d%n", bCounter);
+            System.out.printf("C: %d%n", cCounter);
+            System.out.printf("D: %d%n", dCounter);
+            System.out.printf("F: %d%n", fCounter);
         }
         else {
             System.out.println("No grades were entered.");
+
         }
     }
 }
