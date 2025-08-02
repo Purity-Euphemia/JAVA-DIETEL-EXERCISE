@@ -16,6 +16,25 @@ public class DeckOfCards {
             deck[count] = new Card(faces[count % 13], suits[count / 13]);
         }
     }
-    
+    public void shuffle(){
+        currentCard = 0;
+
+        for (int fist = 0; fist < deck.length; fist++){
+            int second = randomNumbers.nextInt(NUMBER_OF_CARDS);
+            Card temp = deck[fist];
+            deck[fist] = deck[second];
+            deck[second] = temp;
+        }
+    }
+
+    public Card dealCard(){
+        if (currentCard < deck.length){
+            return deck[currentCard++];
+        }
+        else {
+            return null;
+        }
+
+    }
 
 }
